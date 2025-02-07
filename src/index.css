@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400@700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* Import Custom Font */
+@font-face {
+  font-family: 'Gistesy';
+  src: url('/assets/gistesy/Gistesy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Le Jour Serif';
+  src: url('/assets/le_jour_serif/Le Jour Serif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-nanum: 'Josefin Sans', sans-serif;
+  --font-mulish: 'Lato', sans-serif;
+  --font-allison: 'Allison', cursive;
+  --font-gistesy: 'Cormorant Garamond', sans-serif;
+  --font-logo: 'Le Jour Serif', sans-serif;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-n-9 text-n-4 text-base;
+  }
+}
+
+.shadow-light {
+  --tw-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--tw-shadow) !important;
+}
+
+.custom-grid-cols {
+  grid-template-columns:
+    minmax(0, calc(20% - ((var(--global-kb-gap-sm, 1rem) * 1) / 2)))
+    minmax(0, calc(80% - ((var(--global-kb-gap-sm, 1rem) * 1) / 2)));
+}
+.half-circle-logo-container {
+  position: relative;
+  top: 40px; /* Adjust to overlap with header */
+  width: 100px; /* Width for half-circle */
+  height: 50px; /* Half the width for half-circle */
+  background-color: white; /* Background color for the half-circle */
+  border-radius: 0 0 50px 50px; /* Creates the half-circle shape */
+  border: 2px solid #d8c1b0; /* Optional border color */
+}
+
+.logo {
+  background-image: url('/assets/Virlama.jpg');
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  transition: background-image 0.2s ease-out;
+}
+
+.logo:hover {
+  background-image: url('/assets/Virlama-hover.jpg');
+}
