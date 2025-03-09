@@ -15,7 +15,7 @@ const Banner = () => {
             className="hidden md:block lg:block bg-cover bg-center md:bg-right w-full h-[25rem] "
             style={{
               backgroundImage:
-                "url('/assets/lifestyle_img/cashmere_care_banner_size.svg')",
+                "url('/assets/lifestyle_img/cashmere_care_banner_size.png')",
             }}
           ></div>
 
